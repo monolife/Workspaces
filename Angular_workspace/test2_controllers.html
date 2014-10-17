@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+	<div ng-app="" ng-controller="personController" ng-init="personObj={fName:'John',lName:'Denver'}">
+		First Name: <input type="text" ng-model="firstName"><br>
+		Last Name: <input type="text" ng-model="lastName"><br>
+		<br>
+		Full Name: {{ firstName + " " + lastName }}
+		</p>
+		Example Name: {{ personObj.fName + " " + personObj.lName }}
+		<p>Example using ng-binding:
+			<br>
+			<span ng-bind="personObj.lName"></span>
+		</p>
+	</div>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+
+	<script type="text/javascript">
+	function personController($scope){
+		$scope.firstName="John";
+		$scope.lastName="Doe";
+	}
+	</script>
+
+</body>
+
+</html>
